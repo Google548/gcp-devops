@@ -1,14 +1,14 @@
 # This is the provider used to spin up the gcloud instance
 provider "google" {
  
-  project = "nasa7733-lab"
+  project = "labsession-548"
   credentials = file("terraform.json")
   region  = "us-east1"
   
 }
 
 resource "google_compute_instance" "vm-instance" {
-  name         = "test"
+  name         = "jenkins-vminstance"
   machine_type = "f1-micro"
   zone         = "us-east1-b"
 
