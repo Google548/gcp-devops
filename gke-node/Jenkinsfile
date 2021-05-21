@@ -27,15 +27,31 @@ pipeline {
             }
         }
         
-         stage('Provision infrastructure') {
+         stage('Terraform Initilazation') {
 		 steps {            
 			 dir ('gke-node')
 			 {
-                sh 'terraform init'
-                sh 'terraform plan'
-                sh 'terraform apply -auto-approve'
-                             
+                sh 'terraform init'                         
              
+			 } 
+        }
+        }
+
+        stage('Terraform Plan') {
+		 steps {            
+			 dir ('gke-node')
+			 {
+                sh 'terraform plan'
+             
+			 } 
+        }
+        }
+
+        stage('Terraform apply') {
+		 steps {            
+			 dir ('gke-node')
+			 {
+                sh 'terraform apply -auto-approve'
 			 } 
         }
         }
