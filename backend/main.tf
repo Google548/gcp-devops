@@ -1,7 +1,7 @@
 # This is the provider used to spin up the gcloud instance
 provider "google" {
   credentials = file("terraform.json")
-  project = "nasa7733-lab"
+  project = "labsession-548"
   region  = "us-east1"
   
 }
