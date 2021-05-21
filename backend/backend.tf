@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
-    bucket = "nasa7733-lab-terraform-state"
-    prefix      = "monday"
+    bucket = "automation-scripts"
+    prefix      = "terraformstatefile"
     credentials = "terraform.json"
   }
 }
