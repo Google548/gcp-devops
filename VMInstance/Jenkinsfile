@@ -3,7 +3,7 @@ pipeline {
 
 
     environment {
-    SVC_ACCOUNT_KEY = credentials('jenkinssecretkey')
+    SVC_ACCOUNT_KEY = credentials('kube')
   }
      
     stages {
