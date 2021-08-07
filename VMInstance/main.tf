@@ -2,7 +2,7 @@
 provider "google" {
  
   project = "kube-318804"
-  credentials = file("	kube-318804")
+  credentials = file("kube")
   region  = "us-east1"
   
 }
