@@ -2,7 +2,7 @@
 provider "google" {
  
   project = "kube-318804"
-  credentials = file("terraform.json")
+  credentials = file("	kube-318804")
   region  = "us-east1"
   
 }
